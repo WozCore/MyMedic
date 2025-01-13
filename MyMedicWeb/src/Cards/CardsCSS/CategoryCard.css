@@ -7,6 +7,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 16px;
+    
     text-align: center;
     width: 100%; /* Автоматически адаптируется */
     aspect-ratio: 1; /* Делает ширину и высоту одинаковыми */
@@ -24,9 +25,14 @@
     object-fit: contain;
 }
 
-.card-title {
+.card-title h3{
     margin-top: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
+    font-size:  1rem;
+  
+    color: #000;
 }
+@media (min-width: 768px) {
+   .card-title h3{
+    font-size:  1.3rem;
+   }
+  }
