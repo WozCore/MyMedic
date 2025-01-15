@@ -73,22 +73,23 @@ const ProductDetail: React.FC = () => {
               className="main-product-image"
             />
           </div>
+          {product.images.length>1 && (
           <div className="thumbnail-container">
             <div className="thumbnail-slider">
-              {product.images.map((image) => (
-                <img
-                  key={image.id}
-                  src={`http://localhost:5103/images/products/${image.imageUrl}`}
-                  alt="Thumbnail"
-                  className={`thumbnail-image ${
-                    selectedImage === image.imageUrl ? "selected" : ""
-                  }`}
-                  onClick={() => handleThumbnailClick(image.imageUrl)}
-                />
-              ))}
+            {product.images.map((image) => (
+                  <img
+                    key={image.id}
+                    src={`http://localhost:5103/images/products/${image.imageUrl}`}
+                    alt="Thumbnail"
+                    className={`thumbnail-image ${
+                      selectedImage === image.imageUrl ? "selected" : ""
+                    }`}
+                    onClick={() => handleThumbnailClick(image.imageUrl)}
+                  />
+                ))}
             </div>
           </div>
-
+)}
 
     
         </div>
