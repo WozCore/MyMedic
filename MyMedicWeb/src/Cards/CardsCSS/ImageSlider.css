@@ -1,0 +1,21 @@
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .slider-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  
+  .slider-image {
+    max-width: 80%;
+    max-height: 400px;
+    object-fit: contain;
+  }
+  

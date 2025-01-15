@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import logo from './assets/logo.png'
-import CategoryCard from './Cards/CategoryCard';
+import CatalogMainList from './Lists/CatalogMainList';
 interface Item {
     id: number;
     title: string;
@@ -47,13 +47,8 @@ function Hero() {
             </h5>
            
         </section>
-        <section className='catalog'>
-            <h3>Популярные категории</h3>
-            <div className="card-container">
-                {items.map((item) => (
-                    <CategoryCard key={item.id} title={item.title} imageUrl={item.imageUrl} />
-                ))}
-            </div>
+        <section>
+            <CatalogMainList/>
         </section>
         </div>
     );

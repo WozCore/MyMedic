@@ -1,0 +1,56 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    min-height: calc(2 * 1.3rem + 20px);
+    text-align: center;
+    width: 100%; /* Адаптивно */
+    aspect-ratio: 1; /* Делаем картинку квадратной */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-image {
+    max-width: 80%; /* Масштабируется в зависимости от карточки */
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  .card-title h3 {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #000;
+  }
+  
+  .card-price p {
+    font-size: 0.9rem;
+    color: #000;
+    margin-top: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .card-title h3 {
+      font-size: 1.3rem;
+    }
+  
+    .card-price p {
+      font-size: 1.1rem;
+    }
+  }
+  
