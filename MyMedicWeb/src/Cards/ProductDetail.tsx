@@ -96,15 +96,12 @@ const ProductDetail: React.FC = () => {
 
         <div className="product-info">
           <h1 className="product-title">{product.productName}</h1>
-          <p className="product-article">Артикул: {product.article}</p>
           <p className="product-description">{product.productDescription}</p>
           <p className="product-price">Цена: <span>{product.productPrice} сом</span></p>
-          <p className="product-weight">Вес: <span>{product.weight}</span></p>
-          <p className="product-dimensions">Размеры: <span>{product.dimensions}</span></p>
-          <p className="product-availability">
-            Статус: <span>{product.availability ? "В наличии" : "Нет в наличии"}</span>
+           <p className="product-availability">
+            Статус: <span>{product.availability ? "В наличии" : "Есть в наличии"}</span>
           </p>
-          <button className="add-to-cart-btn">В КОРЗИНУ</button>
+          <button className="add-to-cart-btn">В КОРЗИНУ (скоро)</button>
         </div>
       </div>
     </div>

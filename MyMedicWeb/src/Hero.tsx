@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import Header from './Header';
 import logo from './assets/logo.png'
 import CatalogMainList from './Lists/CatalogMainList';
 interface Item {
@@ -17,7 +18,9 @@ function Hero() {
         { id: 5, title: "Терапия", imageUrl: "https://via.placeholder.com/200" },
     ];
     return (
+        
         <div className='heroMain'>
+          <Header />
         <section className="main">
             <img className='logo' src={logo} alt='logo'></img>
             <h1 className='hero'>

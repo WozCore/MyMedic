@@ -1,0 +1,101 @@
+/* BurgerMenu.css */
+body {
+    background-color: white; /* Белый фон */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+/* Кнопка для открытия меню */
+.burger-button.open {
+    max-width: 50px;
+    text-align: start;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+  }
+  
+  /* Кнопка для закрытия меню внутри самого меню */
+  .burger-button.close {
+    /* позиционирование внутри меню */
+    left: 0;
+    border: none;
+    text-align: start;
+    position: absolute;
+    top: 0px;
+    font-size: 30px;
+    background-color: transparent;
+    max-height:50px;
+    position: absolute;
+    max-width: 50px;
+    padding: 10px;
+    
+  }
+
+ .logoOpen{
+   
+    display: block;
+    margin: 0 auto; 
+    position: absolute;
+    top: 10px;
+    max-height: 100px;
+    position: absolute;
+    max-width: 100px;
+ }
+
+  /* Меню, которое появляется при открытии */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Когда меню открыто */
+  .menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  .menu li {
+    font-size: 2rem;
+    margin: 20px;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 60px 0 0; /* Отступ сверху для кнопок */
+  }
+  
+  /* Элементы списка */
+  .menu-list li {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0; /* Линия между пунктами */
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  /* Эффект при наведении */
+  .menu-list li:hover {
+    background-color: #f5f5f5; /* Светлый фон при наведении */
+  }

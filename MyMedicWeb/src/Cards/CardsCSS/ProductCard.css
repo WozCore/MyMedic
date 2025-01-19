@@ -7,7 +7,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 16px;
-    min-height: calc(2 * 1.3rem + 20px);
+    min-height: calc(2 * 1.3rem + 100px);
     text-align: center;
     width: 100%; /* Адаптивно */
     aspect-ratio: 1; /* Делаем картинку квадратной */
