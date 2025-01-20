@@ -20,7 +20,7 @@ function Hero() {
     return (
         
         <div className='heroMain'>
-          <Header />
+         <Header showLogo={false} />
         <section className="main">
             <img className='logo' src={logo} alt='logo'></img>
             <h1 className='hero'>

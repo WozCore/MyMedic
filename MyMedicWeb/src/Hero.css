@@ -5,7 +5,7 @@
     text-align: center;
     background-color: #ffffff; /* Белый фон */
     padding: 2em;
-    padding: 50px 0;
+    padding: 50px 0px;
     box-sizing: border-box;
    
    
@@ -16,6 +16,7 @@
     overflow-y: auto;
 }
 .logo {
+  
     display: block;
     margin: 0 auto; /* Центрируем изображение */
     width: 120px; /* Ширина логотипа, настройте по вашему желанию */

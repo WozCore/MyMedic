@@ -3,7 +3,7 @@ import { useParams, useLocation, Link } from "react-router-dom";
 import CategoryCard from "../Cards/CategoryCard";
 import ProductCard from "../Cards/ProductCard";
 import "./ListsCSS/Catalog.css";
-
+import Header from "../Header";
 const Catalog = () => {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
@@ -66,6 +66,7 @@ const Catalog = () => {
 
   return (
     <div>
+        <Header showLogo={true} />
       {/* Хлебные крошки */}
       <nav className="breadcrumbs">
         <Link to="/">Главное</Link>
