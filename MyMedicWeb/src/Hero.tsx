@@ -25,7 +25,7 @@ function Hero() {
             <img className='logo' src={logo} alt='logo'></img>
             <h1 className='hero'>
                 
-                <span className="highlight">MyMedic</span> 
+                <span className="highlight">MyMedik</span> 
                
             </h1>
           <h3 className='miniSection'>
