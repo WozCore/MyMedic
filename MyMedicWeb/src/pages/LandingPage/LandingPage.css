@@ -1,0 +1,172 @@
+.mainContainer {
+    gap: 24px;
+    margin: 0 auto;
+    background-color: #f3fcfd;
+    padding: 140px;
+}
+.mainTextBlock,
+.mainTextBlock2 {
+    background-color: rgba(136, 209, 216, 0.64);
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainTextBlock2 {
+    margin-top: 120px;
+}
+.mainText {
+    margin-left: 24px;
+}
+.medicineText {
+    font-size: 48px;
+    font-family: Aboreto, sans-serif;
+    font-weight: 300;
+}
+.medicineTextSmall {
+    font-size: 24px;
+    font-family: Aboreto, sans-serif;
+    font-weight: 200;
+    margin: 45px 0 146px;
+}
+.firstImgBlock {
+    max-width: 514px;
+    margin-left: 70px;
+}
+.seeCatalogBtn,
+.seeCatalogBtn2 {
+    width: 290px;
+    height: 62px;
+    background-color: #9258ff;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+.seeCatalogBtn2 {
+    margin: 40px auto;
+    display: block;
+}
+.mainTextAboutBlock {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutText {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+}
+.line,
+.line2 {
+    border: 1px solid rgba(0, 0, 0, 0.102);
+    max-width: 1000px;
+    margin: 24px 0 40px;
+}
+.line2 {
+    border: 1px solid rgba(0, 0, 0, 0.313);
+}
+.timeWrapperBlock {
+    display: flex;
+}
+.number {
+    font-size: 40px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    color: #9747ff;
+}
+.numberDesc {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 200;
+}
+.images2layers {
+    position: relative;
+    max-width: 580px;
+    height: 572px;
+    margin-left: 50px;
+}
+.images2layers .doc1img {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    z-index: 0;
+    width: 358px;
+}
+.images2layers .doc2img {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    z-index: 1;
+    width: 358px;
+}
+.twoImages {
+    margin-left: 60px;
+}
+.twoImages .doc1img {
+    margin-bottom: 42px;
+}
+
+.reviewCardsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
+.reviewText {
+    display: flex;
+    font-size: 48px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    color: #9747ff;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.reviewCard {
+    padding: 38px 10px 10px;
+    position: relative;
+}
+.reviewTextCard {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    max-width: 397px;
+    height: 276px;
+    padding: 40px;
+    overflow: visible;
+    background-color: #fff;
+    padding-top: 70px;
+}
+.review,
+.reviewerName,
+.reviewerJob {
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    line-height: 140%;
+}
+.review {
+    height: 60px;
+}
+.reviewerJob {
+    font-weight: 200;
+}
+.starImg {
+    width: 18px;
+}
+.starsBlock {
+    max-width: max-content;
+}
+.reviewerName {
+    display: flex;
+    justify-content: space-between;
+}
+.peopleImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 12px;
+}

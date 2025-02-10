@@ -1,8 +1,0 @@
-
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%; /* Убедитесь, что элементы занимают всю ширину */
-    overflow-x: hidden; /* Убирает горизонтальную прокрутку, если есть */
-}
