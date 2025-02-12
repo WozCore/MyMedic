@@ -1,0 +1,106 @@
+.signInContainer {
+    gap: 140px;
+    margin: 0 auto;
+    width: 1300px;
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.signInBlock1 {
+    background-color: #d4eef1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 562px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.mainTextSignIn {
+    font-size: 48px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.signInBlock2 {
+    max-width: 590px;
+    margin: auto 0;
+}
+.registerSignIn {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    margin: 50px 0 34px;
+}
+.inputTextName {
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 100;
+    margin: 12px 0;
+    color: #c6bebe;
+}
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 590px;
+}
+.nameBlock,
+.inputBlocks {
+    padding: 4px 0;
+}
+.nameBlock {
+    width: max-content;
+}
+
+.nameinput,
+.input {
+    width: 280px;
+    height: 56px;
+    border-radius: 10px;
+    border: 1px solid #948888;
+    box-shadow: 0 2px 2px 0 rgba(90, 90, 90, 0.25);
+    font-size: 18px;
+    font-family: Inter, sans-serif;
+    padding: 0 12px;
+}
+.input {
+    width: 588px;
+    padding: 0 12px;
+    font-size: 18px;
+    font-family: Inter, sans-serif;
+}
+.submitButton {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #9258ff;
+    color: #fff;
+}
+.buttonsSubmit {
+    display: flex;
+    align-items: center;
+    margin-top: 130px;
+    flex-direction: column;
+}
+
+.changeAuthType {
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 100;
+    color: #9747ff;
+    text-decoration: none;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    margin-left: 1080px;
+}
+.errorText {
+    color: red;
+    padding: 4px;
+}

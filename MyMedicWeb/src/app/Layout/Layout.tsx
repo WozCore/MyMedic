@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-// import Header from "../../modules/Header/Header";
+import { Footer } from "../../modules/Footer/Footer";
+import { Header } from "../../modules/Header/Header";
 
 export const Layout: React.FC = () => {
     const location = useLocation();
@@ -11,11 +12,11 @@ export const Layout: React.FC = () => {
 
     return (
         <div>
-            {/* <Header /> */}
+            <Header />
             <main>
                 <Outlet />
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 };

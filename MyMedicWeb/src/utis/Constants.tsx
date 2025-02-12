@@ -6,6 +6,9 @@ export const PATH: Record<string, string> = {
     catalogOpen: "/catalog/:id",
     product: "/product/:id",
     landing: "/landing",
+    signin: "/signin",
+    login: "/login",
+    useraccount: "/useraccount",
 };
 interface Item {
     id: number;

@@ -1,11 +1,14 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Hero from "../../pages/Hero";
 import CatalogMainList from "../../Lists/CatalogMainList";
-import Catalog from "../../Lists/Catalog";
+// import Catalog from "../../Lists/Catalog";
 // import { ProductDetail } from "../../Cards/ProductDetail";
 import { Layout } from "../Layout/Layout";
 import { PATH } from "../../utis/Constants";
 import LandingPage from "../../pages/LandingPage/LandingPage";
+import { SignIn } from "../../pages/SignIn/SignIn";
+import { LogIn } from "../../pages/Login/Login";
+import { UserAccountPage } from "../../pages/UserAccountPage/UserAccountPage";
 
 const routes: RouteObject[] = [
     {
@@ -24,15 +27,28 @@ const routes: RouteObject[] = [
                 path: PATH.catalog,
                 element: <CatalogMainList />,
             },
-            {
-                path: PATH.catalogOpen,
-                element: <Catalog />,
-            },
+
+            // {
+            //     path: PATH.catalogOpen,
+            //     element: <Catalog />,
+            // },
             // {
             //     path: PATH.product,
             //     element: <ProductDetail />,
             // },
         ],
+    },
+    {
+        path: PATH.signin,
+        element: <SignIn />,
+    },
+    {
+        path: PATH.useraccount,
+        element: <UserAccountPage />,
+    },
+    {
+        path: PATH.login,
+        element: <LogIn />,
     },
 ];
 
