@@ -2,72 +2,86 @@ import React, { useState } from "react";
 import "./UserAccountPage.css";
 import { useNavigate } from "react-router-dom";
 import { PATH } from "../../utis/Constants";
+import { UserAccount } from "../../modules/UserAccount/UserAccount";
+import { MyBasket } from "../../modules/MyBasket/MyBasket";
+import { AddressManagement } from "../../modules/AddressManagement/AddressManagement";
+import { PaymentMethods } from "../../modules/PaymentMethods/PaymentMethods";
+import { ChangePassword } from "../../modules/ChangePassword/ChangePassword";
 
 export const UserAccountPage: React.FC = () => {
     const navigate = useNavigate();
-    const storedData = JSON.parse(localStorage.getItem("userData") || "{}");
-
-    const [formData, setFormData] = useState({
-        firstName: storedData.firstName || "",
-        lastName: storedData.lastName || "",
-        email: storedData.email || "",
-        phone: storedData.phone || "",
-        gender: storedData.gender || "male",
-        profileImage: storedData.profileImage || null,
-    });
+    const [activeSection, setActiveSection] = useState<
+        "account" | "basket" | "address" | "payment" | "password"
+    >("account");
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
-        navigate(PATH.login);
+        navigate(PATH.landing);
     };
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-    ) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setFormData({
-                    ...formData,
-                    profileImage: reader.result as string,
-                });
-            };
-            reader.readAsDataURL(file);
+    const getTitle = () => {
+        switch (activeSection) {
+            case "account":
+                return "Мой Аккаунт";
+            case "basket":
+                return "Мои покупки";
+            case "address":
+                return "Мои адреса";
+            case "payment":
+                return "Способы оплаты";
+            case "password":
+                return "Изменить пароль";
+            default:
+                return "Мой Аккаунт";
         }
-    };
-
-    const handleSave = () => {
-        localStorage.setItem("userData", JSON.stringify(formData));
-        alert("Данные сохранены!");
     };
 
     return (
         <div className="account-page">
             <header className="account-header">
-                <h2 className="myAccountTitle">Мой Аккаунт</h2>
+                <h2 className="myAccountTitle">{getTitle()}</h2>
             </header>
-
             <div className="account-container">
                 <div className="account-sidebar">
-                    <button className="account-btn">
+                    <button
+                        className={`account-btn ${
+                            activeSection === "account" ? "active" : ""
+                        }`}
+                        onClick={() => setActiveSection("account")}
+                    >
                         Персональная информация
                     </button>
-                    <button className="account-btn otherButtons">
+                    <button
+                        className={`account-btn otherButtons ${
+                            activeSection === "basket" ? "active" : ""
+                        }`}
+                        onClick={() => setActiveSection("basket")}
+                    >
                         Мои покупки
                     </button>
-                    <button className="account-btn otherButtons">
+                    <button
+                        className={`account-btn otherButtons ${
+                            activeSection === "address" ? "active" : ""
+                        }`}
+                        onClick={() => setActiveSection("address")}
+                    >
+                        Управление адресом
+                    </button>
+                    <button
+                        className={`account-btn otherButtons ${
+                            activeSection === "payment" ? "active" : ""
+                        }`}
+                        onClick={() => setActiveSection("payment")}
+                    >
                         Способы оплаты
                     </button>
                     <button
-                        className="account-btn otherButtons"
-                        onClick={() => navigate("/landing")}
+                        className={`account-btn otherButtons ${
+                            activeSection === "password" ? "active" : ""
+                        }`}
+                        onClick={() => setActiveSection("password")}
                     >
-                        На главную
+                        Изменить пароль
                     </button>
 
                     <button
@@ -79,75 +93,11 @@ export const UserAccountPage: React.FC = () => {
                 </div>
 
                 <div className="account-content">
-                    <div className="profile-section">
-                        <div className="profile-image">
-                            <input
-                                type="file"
-                                id="fileUpload"
-                                accept="image/*"
-                                onChange={handleImageUpload}
-                                hidden
-                            />
-                            <label htmlFor="fileUpload" className="upload-area">
-                                {formData.profileImage ? (
-                                    <img
-                                        src={formData.profileImage}
-                                        alt="Profile"
-                                        className="profile-img"
-                                    />
-                                ) : (
-                                    <div className="upload-placeholder">
-                                        Загрузить фото
-                                    </div>
-                                )}
-                            </label>
-                        </div>
-
-                        <div className="profile-details">
-                            <div className="userNameContainer">
-                                <div className="userNameBlock">
-                                    <label>Имя</label>
-                                    <input
-                                        type="text"
-                                        name="firstName"
-                                        className="userNameinput"
-                                        value={formData.firstName}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                                <div className="userNameBlock">
-                                    <label>Фамилия</label>
-                                    <input
-                                        type="text"
-                                        name="lastName"
-                                        className="userNameinput"
-                                        value={formData.lastName}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                            </div>
-
-                            <label>Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-
-                            <label>Телефон</label>
-                            <input
-                                type="tel"
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                            />
-
-                            <button className="save-btn" onClick={handleSave}>
-                                Сохранить данные
-                            </button>
-                        </div>
-                    </div>
+                    {activeSection === "account" && <UserAccount />}
+                    {activeSection === "basket" && <MyBasket />}
+                    {activeSection === "address" && <AddressManagement />}
+                    {activeSection === "payment" && <PaymentMethods />}
+                    {activeSection === "password" && <ChangePassword />}
                 </div>
             </div>
         </div>

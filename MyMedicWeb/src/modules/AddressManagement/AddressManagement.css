@@ -1,0 +1,58 @@
+.addressContainerUser {
+    display: grid;
+    grid-template-columns: repeat(2, 338px);
+    gap: 66px;
+    justify-content: center;
+    align-items: center;
+}
+.addressItem {
+    width: 338px;
+    height: 338px;
+    border-radius: 15px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    padding: 60px;
+    margin: 0 auto;
+}
+.addressLabel {
+    margin-bottom: 40px;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.checkboxDiv {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+.checkboxDiv label {
+    font-size: 13px;
+    color: #aea8a8;
+    font-family: Inter, sans-serif;
+}
+.checkbox {
+    max-width: 35px;
+    height: 35px;
+    appearance: none;
+    background-color: white;
+    border: 2px solid #a3a3a3;
+    border-radius: 0px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox:checked {
+    background-color: #a3a3a3;
+}
+
+.checkbox:checked::after {
+    content: "✔";
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Hero from "../../pages/Hero";
-import CatalogMainList from "../../Lists/CatalogMainList";
+// import CatalogMainList from "../../Lists/CatalogMainList";
 // import Catalog from "../../Lists/Catalog";
 // import { ProductDetail } from "../../Cards/ProductDetail";
 import { Layout } from "../Layout/Layout";
@@ -9,6 +9,7 @@ import LandingPage from "../../pages/LandingPage/LandingPage";
 import { SignIn } from "../../pages/SignIn/SignIn";
 import { LogIn } from "../../pages/Login/Login";
 import { UserAccountPage } from "../../pages/UserAccountPage/UserAccountPage";
+import CatalogPage from "../../pages/CatalogPage/CatalogPage";
 
 const routes: RouteObject[] = [
     {
@@ -23,10 +24,10 @@ const routes: RouteObject[] = [
                 path: PATH.landing,
                 element: <LandingPage />,
             },
-            {
-                path: PATH.catalog,
-                element: <CatalogMainList />,
-            },
+            // {
+            //     path: PATH.catalog,
+            //     element: <CatalogMainList />,
+            // },
 
             // {
             //     path: PATH.catalogOpen,
@@ -49,6 +50,10 @@ const routes: RouteObject[] = [
     {
         path: PATH.login,
         element: <LogIn />,
+    },
+    {
+        path: PATH.catalog,
+        element: <CatalogPage />,
     },
 ];
 

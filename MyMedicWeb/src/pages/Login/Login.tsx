@@ -3,7 +3,7 @@ import "./Login.css";
 import logoMain from "../../assets/logoMain.png";
 import { Link, useNavigate } from "react-router-dom";
 import { PATH } from "../../utis/Constants";
-import { useLogInStore } from "./store/useLogInStore"; // ✅ Import store
+import { useLogInStore } from "./store/useLogInStore";
 
 export const LogIn: React.FC = () => {
     const navigate = useNavigate();

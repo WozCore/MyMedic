@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logoMain from "../../assets/logoMain.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { PATH } from "../../utis/Constants";
 import basket from "../../assets/busket.png";
+import { Cart } from "../Cart/Cart";
 
 export const Header: React.FC = () => {
     const navigate = useNavigate();
     const token = localStorage.getItem("authToken");
+    const [showBasket, setShowBasket] = useState(false);
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
@@ -54,7 +56,7 @@ export const Header: React.FC = () => {
 
                     <button
                         className="icon-button"
-                        onClick={() => navigate("/cart")}
+                        onClick={() => setShowBasket("/cart")}
                     >
                         <img src={basket} className="basketImg" alt="Cart" />
                     </button>
@@ -65,6 +67,7 @@ export const Header: React.FC = () => {
                     >
                         <FaUser />
                     </button>
+                    {showBasket && <Cart />}
                 </div>
             </div>
         </header>

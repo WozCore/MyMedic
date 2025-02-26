@@ -1,0 +1,150 @@
+.basketContainer {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 606px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow: hidden;
+}
+.basketHeader h2 {
+    font-size: 20px;
+    font-weight: 600px;
+    font-family: Inter, sans-serif;
+    max-width: 210px;
+}
+.basketHeader h3 {
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    color: #676767;
+    width: 100px;
+}
+.basketHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+.basketItem {
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid black;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.basketImgDiv {
+    max-width: 164px;
+    height: 166px;
+}
+.basketImage {
+    max-width: 164px;
+    height: 166px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.basketTitle,
+.basketPrice {
+    font-size: 17.45px;
+    font-weight: bold;
+    font-family: Inter, sans-serif;
+}
+.basketDesc {
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+}
+
+.basketDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.clearBasket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 161px;
+    height: 34px;
+    padding: 3px;
+    border: 1.5px solid #676767;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.clearIcon {
+    width: 10px;
+    font-size: 14px;
+    color: #676767;
+}
+.clearText {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    width: 130px;
+    color: #676767;
+}
+.clearIconBig {
+    font-size: 34px;
+    color: #676767;
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    position: relative;
+    top: -5px;
+}
+.counterDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 28px;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.counterBtn {
+    width: 50px;
+    height: 27px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0d0d0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.counter-text {
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 16px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: Inter, sans-serif;
+}
+
+.imageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.heartIcon {
+    position: absolute;
+    top: -10px;
+    right: -155px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
